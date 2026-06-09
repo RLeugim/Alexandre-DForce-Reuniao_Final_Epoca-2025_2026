@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Transição Época Sub-15 - Alexandre</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dfBlue: {
+                            50: '#f0f4fc',
+                            100: '#e1e9f6',
+                            500: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                        },
+                        dfGold: '#d97706',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-active {
+            border-bottom-color: #1e40af;
+            color: #1e40af;
+        }
+        .dark .tab-active {
+            border-bottom-color: #3b82f6;
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+
+    <!-- Top Navigation / Header -->
+    <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- SVG Logo representativo Dragon Force -->
+                <svg class="w-8 h-8 text-blue-700 dark:text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <div>
+                    <span class="font-extrabold text-lg tracking-wider text-blue-900 dark:text-blue-400">DRAGON FORCE</span>
+                    <span class="text-xs block text-slate-500 dark:text-slate-400 -mt-1">Relatório de Fim de Época • Sub-15</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Theme Toggle -->
+                <button id="themeToggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:ring-2 hover:ring-blue-500 transition-all">
+                    <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                    </svg>
+                    <svg id="moonIcon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <div class="hidden md:block text-right">
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Atleta: <strong>Alexandre (Alex)</strong></p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Encarregado: <strong>Miguel & Xany</strong></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Hero Section & Resumo Executivo -->
+        <section class="mb-8 bg-gradient-to-br from-blue-900 to-blue-950 text-white rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+            <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-10 translate-y-10">
+                <svg class="w-80 h-80" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div class="relative z-10">
+                <div class="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-400/30 px-3 py-1 rounded-full text-xs font-semibold text-blue-300 mb-4">
+                    <span>Aprovado em Reunião Técnica</span>
+                    <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Plano de Integração Desportiva</h1>
+                <p class="text-blue-100 max-w-3xl mb-6 text-sm sm:text-base">
+                    Diretrizes estratégicas resultantes da reunião com o Coordenador Técnico <strong>Mister António</strong> e o Coordenador Administrativo <strong>Sr. Rui</strong> para a transição do Alexandre para o escalão de <strong>Sub-15 (Época Próxima)</strong>.
+                </p>
+                
+                <!-- Quick KPI Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-blue-800/60">
+                    <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+                        <span class="text-xs text-blue-300 block">Mensalidade Época</span>
+                        <span class="text-lg sm:text-xl font-bold text-green-400">0 € (Isento)</span>
+                    </div>
+                    <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+                        <span class="text-xs text-blue-300 block">Treinos Semanais</span>
+                        <span class="text-lg sm:text-xl font-bold text-blue-200">4 Vezes/Semana</span>
+                    </div>
+                    <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+                        <span class="text-xs text-blue-300 block">Formato Transição</span>
+                        <span class="text-lg sm:text-xl font-bold text-amber-400">Híbrido (A / B)</span>
+                    </div>
+                    <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+                        <span class="text-xs text-blue-300 block">Foco de Trabalho</span>
+                        <span class="text-lg sm:text-xl font-bold text-blue-300">Intensidade & Voz</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <div class="mb-6 border-b border-slate-200 dark:border-slate-800">
+            <nav class="flex space-x-4 overflow-x-auto pb-px" aria-label="Tabs">
+                <button onclick="switchTab('modelo')" id="tab-modelo" class="tab-btn py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap tab-active">
+                    1. Novo Modelo Sub-15
+                </button>
+                <button onclick="switchTab('horarios')" id="tab-horarios" class="tab-btn py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 border-transparent">
+                    2. Horários e Logística
+                </button>
+                <button onclick="switchTab('analise')" id="tab-analise" class="tab-btn py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 border-transparent">
+                    3. Perfil do Alex (Futebol & Vida)
+                </button>
+                <button onclick="switchTab('competicao')" id="tab-competicao" class="tab-btn py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 border-transparent">
+                    4. Enquadramento Competitivo
+                </button>
+                <button onclick="switchTab('administrativo')" id="tab-administrativo" class="tab-btn py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 border-transparent">
+                    5. Checklist Administrativo
+                </button>
+            </nav>
+        </div>
+
+        <!-- TAB CONTENT 1: Novo Modelo -->
+        <div id="content-modelo" class="tab-content block space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Modelo de Fusão das Equipas B -->
+                <div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <h2 class="text-xl font-bold mb-4 flex items-center text-blue-900 dark:text-blue-300">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 114 0v2m-4 0h4m-4 0H5m12 0h3M12 20v-8m0 0V5" /></svg>
+                        Uniformização Regional (Maia + Porto)
+                    </h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                        Anteriormente, existiam equipas de Sub-15B independentes na Maia e no Porto. Para a próxima época, a estrutura Dragon Force irá <strong>unificar as equipas da 2.ª e 3.ª divisões</strong> para garantir um acompanhamento homogéneo e otimizar a transição para o futebol nacional.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                        <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <h3 class="font-semibold text-sm text-blue-800 dark:text-blue-400 mb-2">Equipa Seleção (Sub-15A)</h3>
+                            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start"><span class="text-green-500 mr-2">✔</span> Campeonato Nacional / 1.ª Divisão</li>
+                                <li class="flex items-start"><span class="text-green-500 mr-2">✔</span> Sem custo de mensalidade (Isenção Total)</li>
+                                <li class="flex items-start"><span class="text-green-500 mr-2">✔</span> Alto rendimento e exigência fechada</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800">
+                            <h3 class="font-semibold text-sm text-amber-600 dark:text-amber-400 mb-2">Equipa B (Unificada)</h3>
+                            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start"><span class="text-blue-500 mr-2">ℹ</span> Projeto de subida de divisão para a 2.ª</li>
+                                <li class="flex items-start"><span class="text-blue-500 mr-2">ℹ</span> Plantel de 30+ jogadores divididos em 2 séries</li>
+                                <li class="flex items-start"><span class="text-blue-500 mr-2">ℹ</span> Treinos divididos entre Maia e Constituição</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
+                        <h4 class="font-bold text-sm text-amber-800 dark:text-amber-300">O Enquadramento de Transição para o Alex:</h4>
+                        <p class="text-xs text-amber-900/90 dark:text-amber-400 mt-1 leading-relaxed">
+                            A equipa técnica acredita que o Alex tem competências para integrar a <strong>Seleção (A)</strong>. No entanto, para evitar que fique remetido ao banco de suplentes numa fase crucial de adaptação física e competitiva, propuseram um <strong>estatuto de treino híbrido</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quadro de Isenção Financeira -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-950/50 text-green-600 dark:text-green-400 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2">Valorização do Atleta</h2>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                            O Alex passa a estar associado ao grupo de elite da Seleção Dragon Force. Isto traduz-se num voto de confiança e numa isenção total de custos administrativos de mensalidade.
+                        </p>
+                        
+                        <div class="space-y-3 py-4 border-t border-slate-100 dark:border-slate-800">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-500">Mensalidade Padrão:</span>
+                                <span class="line-through text-red-400 font-medium">~40€ a 45€ /mês</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-500">Mensalidade Proposta:</span>
+                                <span class="text-green-500 font-bold">0,00 €</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-500">Inscrição/Seguro:</span>
+                                <span class="text-green-500 font-bold">Incluído</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 dark:bg-blue-950/30 p-4 rounded-xl text-xs text-blue-800 dark:text-blue-300 mt-2">
+                        💡 <strong>Nota da Direção:</strong> Esta isenção reflete a aposta na qualidade técnica do Alex, preparando-o para o patamar nacional sem custos adicionais.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 2: Horários e Logística -->
+        <div id="content-horarios" class="tab-content hidden space-y-6">
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <h2 class="text-xl font-bold mb-2 flex items-center text-blue-900 dark:text-blue-300">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    Plano Semanal de Treinos (Volume: 4x por semana)
+                </h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
+                    O Alex terá 3 sessões na Maia (conforto logístico habitual) e apenas 1 sessão na Constituição (Porto), assegurando um equilíbrio operacional excelente para os pais.
+                </p>
+
+                <!-- Interactive Time-grid -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                    <!-- Segunda -->
+                    <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-blue-100 dark:border-blue-900/30">
+                        <div class="text-xs font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wider mb-2">Segunda-Feira</div>
+                        <div class="bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-600 dark:text-slate-400 font-semibold">Equipa B</span>
+                            <h4 class="text-sm font-bold mt-2">19:45</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center">
+                                📍 Pav. Maia (Relvado)
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Terça -->
+                    <div class="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-xl border border-transparent opacity-60">
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Terça-Feira</div>
+                        <div class="flex items-center justify-center h-20 text-xs italic text-slate-400">
+                            Descanso / Escola
+                        </div>
+                    </div>
+                    <!-- Quarta -->
+                    <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-amber-100 dark:border-amber-900/30">
+                        <div class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-2">Quarta-Feira</div>
+                        <div class="bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            <span class="text-xs bg-amber-100 dark:bg-amber-950/50 px-2 py-0.5 rounded text-amber-700 dark:text-amber-300 font-semibold">Equipa A (Seleção)</span>
+                            <h4 class="text-sm font-bold mt-2">20:50</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center">
+                                📍 Constituição (Porto)
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Quinta -->
+                    <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-amber-100 dark:border-amber-900/30">
+                        <div class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-2">Quinta-Feira</div>
+                        <div class="bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            <span class="text-xs bg-amber-100 dark:bg-amber-950/50 px-2 py-0.5 rounded text-amber-700 dark:text-amber-300 font-semibold">Equipa A (Seleção)</span>
+                            <h4 class="text-sm font-bold mt-2">19:45</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center">
+                                📍 Pav. Maia (Relvado)
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Sexta -->
+                    <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-blue-100 dark:border-blue-900/30">
+                        <div class="text-xs font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wider mb-2">Sexta-Feira</div>
+                        <div class="bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-600 dark:text-slate-400 font-semibold">Equipa B</span>
+                            <h4 class="text-sm font-bold mt-2">19:45</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center">
+                                📍 Pav. Maia (Relvado)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logística e Diretivas Importantes -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-slate-150 dark:border-slate-800">
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-sm text-slate-800 dark:text-slate-200">🔒 Política de Treinos à Porta Fechada (Constituição)</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Por diretriz técnica nacional da Dragon Force, os treinos das seleções na Constituição são estritamente à porta fechada. Os pais não podem permanecer junto à vedação do campo. No entanto, o clube disponibiliza a **sala superior (sala de convívio/cafetaria)** para os pais poderem aguardar confortavelmente.
+                        </p>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-sm text-slate-800 dark:text-slate-200">🏟 Importância Tática dos Campos</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            A equipa técnica defende que treinar em ambos os recintos (Pavilhão da Maia - campo mais curto/rápido, e Constituição - campo grande) prepara de forma ideal o atleta para as diferentes dimensões que encontrará nos jogos do campeonato.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 3: Perfil do Alex -->
+        <div id="content-analise" class="tab-content hidden space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Avaliação Desportiva -->
+                <div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                    <h2 class="text-xl font-bold text-blue-900 dark:text-blue-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Análise de Desenvolvimento de Alexandre
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-green-50/50 dark:bg-green-950/10 p-4 rounded-xl border border-green-100 dark:border-green-900/30">
+                            <h3 class="font-bold text-sm text-green-800 dark:text-green-400 mb-2 flex items-center">
+                                <span class="mr-2">📈</span> Pontos Fortes e Virtudes Táticas
+                            </h3>
+                            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                                <li><strong>Inteligência de Jogo:</strong> Alta capacidade de ler trajetórias e posicionamentos espaciais.</li>
+                                <li><strong>Bolas Paradas (Cantos Ofensivos):</strong> Excelência na leitura de trajetórias e desmarcação (bloqueios típicos de basquetebol).</li>
+                                <li><strong>Qualidade Técnica:</strong> Visão de jogo periférica com capacidade de efetuar passes longos e definir rápido com poucos toques.</li>
+                                <li><strong>Evolução e Influência:</strong> Teve maior impacto desportivo e golos marcados este ano face à época transata.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-amber-50/50 dark:bg-amber-950/10 p-4 rounded-xl border border-amber-100 dark:border-amber-900/30">
+                            <h3 class="font-bold text-sm text-amber-800 dark:text-amber-400 mb-2 flex items-center">
+                                <span class="mr-2">🎯</span> Oportunidades de Melhoria (Foco)
+                            </h3>
+                            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                                <li><strong>Proatividade com Bola:</strong> Necessidade de "crescer com bola" no pé, arriscar mais no drible e na progressão individual.</li>
+                                <li><strong>Voz e Liderança:</strong> Por ser introvertido, tende a calar-se no grupo, o que faz com que jogue em posições mais recuadas "por exclusão de partes".</li>
+                                <li><strong>Capacidade de Reação:</strong> No balneário altamente competitivo de Sub-15, precisa de se impor fisicamente e verbalmente (atitude ativa).</li>
+                                <li><strong>Momento Defensivo:</strong> Ajustes no posicionamento e agressividade nos cantos defensivos.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                        <h4 class="font-bold text-sm mb-2 flex items-center">
+                            <svg class="w-4 h-4 mr-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            O Fator Morfológico (Late-Bloomer)
+                        </h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            O Alex tem atualmente cerca de 1.50m. O raio-X efetuado anteriormente pela <strong>Dr.ª Marta Massada</strong> confirmou que o Alex está num perfil de desenvolvimento morfológico tardio (no limite dos extremos). 
+                            <br><br>
+                            Isto significa que, embora compita temporariamente em desvantagem física contra atletas que nasceram no 1.º trimestre da época, esta adversidade obriga-o a <strong>refinar as competências de decisão rápida, agilidade mental e técnica refinada</strong>. O seu estirão de crescimento surgirá naturalmente com a idade.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visão Educativa / Filosofia do Pai -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-850 text-white p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <!-- Modificado para melhor contraste conforme solicitado -->
+                        <div class="inline-flex items-center space-x-2 bg-blue-600 border border-blue-500 px-3 py-1 rounded-full text-xs font-bold text-white mb-4 shadow-sm">
+                            <span>Filosofia Educacional (Miguel)</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-4 text-blue-300">"Trabalho de Casa" e Resiliência</h3>
+                        
+                        <div class="space-y-4 text-xs text-slate-300">
+                            <p class="leading-relaxed">
+                                Como formador e mentor de excelência, o Miguel partilha de uma visão focada na <strong>autorresponsabilização do atleta</strong>:
+                            </p>
+                            
+                            <blockquote class="border-l-2 border-blue-500 pl-3 italic text-slate-400">
+                                "O futebol é como a escola: há professores/treinadores bons e maus. Se o aluno/atleta faz o seu trabalho de casa com rigor, a responsabilidade dele cresce e ele desenvolve-se sozinho."
+                            </blockquote>
+                            
+                            <p class="leading-relaxed">
+                                ⚽ <strong>Propósito do Futebol:</strong> Mais do que a carreira profissional, o desporto serve como veículo para criar resiliência mental, inteligência social, espírito de grupo e capacidade de ultrapassar injustiças no balneário e na vida.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-slate-400 text-xs">
+                        📌 <strong>Aviso ao Alex:</strong> O foco primário mantém-se em divertir-se, aprender a competir com lealdade e dar o máximo empenho nos treinos.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 4: Enquadramento Competitivo -->
+        <div id="content-competicao" class="tab-content hidden space-y-6">
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <h2 class="text-xl font-bold mb-6 text-blue-900 dark:text-blue-300">Análise Comparativa: Equipa A vs. Equipa B</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Equipa A (Seleção) -->
+                    <div class="border border-slate-200 dark:border-slate-800 rounded-xl p-5 bg-slate-50/50 dark:bg-slate-900/50">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Equipa A (Seleção)</span>
+                            <span class="px-2 py-1 bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 rounded text-xs font-bold">1.ª Divisão Nacional</span>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-400">
+                            <li class="flex items-center"><span class="text-amber-500 mr-2">✦</span> <strong>Plantel Fixo:</strong> ~24 a 25 jogadores (ex: 1 por posição e 3 guarda-redes).</li>
+                            <li class="flex items-center"><span class="text-amber-500 mr-2">✦</span> <strong>Substituições Limitadas:</strong> Apenas 5 substituições permitidas em jogo oficial. Excesso de convocados vai para a bancada.</li>
+                            <li class="flex items-center"><span class="text-amber-500 mr-2">✦</span> <strong>Exigência Balneário:</strong> Competitividade interna feroz onde os meninos lutam agressivamente pela vaga ao fim de semana.</li>
+                            <li class="flex items-center"><span class="text-amber-500 mr-2">✦</span> <strong>Objetivo Técnico:</strong> Manutenção e disputa de fases de apuramento nacionais.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Equipa B (Competição) -->
+                    <div class="border border-slate-200 dark:border-slate-800 rounded-xl p-5 bg-slate-50/50 dark:bg-slate-900/50">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wider">Equipa B (Fusão)</span>
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 rounded text-xs font-bold">3.ª Divisão Distrital</span>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-400">
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">✦</span> <strong>Plantel Alargado:</strong> ~30+ jogadores que treinam juntos durante a semana.</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">✦</span> <strong>Substituições Volantes:</strong> Podem entrar todos (ou até 9 jogadores). Ideal para rotação e minutos de jogo de qualidade.</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">✦</span> <strong>Divisão de Séries:</strong> Desdobramento em duas séries competitivas de fim de semana (ex: Série 5 e Série 7).</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">✦</span> <strong>Gestão de Convocados:</strong> A decisão de qual série o Alex joga será informada apenas à sexta-feira.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Gestão de Expectativas -->
+                <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/40 rounded-xl">
+                    <h3 class="text-sm font-bold text-blue-900 dark:text-blue-300 mb-2">💡 Gestão Estratégica das Expectativas</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        A decisão de manter o Alex com treinos na Seleção (A), mas competir maioritariamente na Equipa B no arranque da época, serve para assegurar que ele <strong>joga sempre e com papel de liderança</strong>. Ir para o banco de suplentes da equipa A na 1.ª Divisão durante 6 a 8 jogos consecutivos poderia estagnar a sua evolução tática e comprometer a sua confiança emocional nesta fase de maturação morfológica.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 5: Checklist Administrativo -->
+        <div id="content-administrativo" class="tab-content hidden space-y-6">
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <h2 class="text-xl font-bold mb-2 text-blue-900 dark:text-blue-300">Processos Administrativos (Sr. Rui)</h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Tarefas administrativas necessárias para a validação da nova época desportiva.</p>
+
+                <div class="space-y-4">
+                    <!-- Item 1: Inscrição / Transfer -->
+                    <div class="flex items-start p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                        <div class="p-2 bg-green-100 dark:bg-green-950/50 text-green-600 dark:text-green-400 rounded-lg mr-4">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-sm">Renovação de Ficha na Federação</h3>
+                                <span class="px-2 py-0.5 bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300 rounded text-2xs font-bold">AUTOMÁTICO</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">Como a filiação se mantém na Dragon Force, o processo de "transfer" é efetuado internamente pela equipa administrativa do Sr. Rui. Sem burocracia para os pais.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Exame Médico -->
+                    <div class="flex items-start p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                        <div class="p-2 bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 rounded-lg mr-4">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-sm">Exame Médico Desportivo (EMD)</h3>
+                                <span class="px-2 py-0.5 bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 rounded text-2xs font-bold">A REALIZAR</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">
+                                Deve ser entregue preferencialmente antes do início oficial da pré-época (meados de agosto). 
+                                <br><strong class="text-slate-700 dark:text-slate-300">Duas opções de realização:</strong>
+                                <br>1. <span class="underline">Internamente:</span> O clube está a tentar organizar datas no Dragão/Constituição (Sr. Rui dará feedback brevemente).
+                                <br>2. <span class="underline">Externamente:</span> Como habitual, o Miguel poderá agendar diretamente no <strong>Centro de Medicina Desportiva do Porto</strong> (necessário de 2 em 2 anos para exaustivo, recomendável anualmente para alta competição).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Início de Época -->
+                    <div class="flex items-start p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                        <div class="p-2 bg-blue-100 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 rounded-lg mr-4">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-sm">Calendário de Arranque (Pré-Época)</h3>
+                                <span class="px-2 py-0.5 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 rounded text-2xs font-bold">PREVISÃO</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">
+                                📅 <strong>Datas Estimadas:</strong>
+                                <br>• <strong>Equipa B:</strong> Arranque previsto entre 18 e 21 de agosto.
+                                <br>• <strong>Equipa A (Seleção):</strong> Pode iniciar um pouco mais cedo em agosto devido à calendarização do campeonato nacional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-slate-500 dark:text-slate-400 text-xs">
+            <p>© 2026 • Plano de Transição Desportiva Alexandre (Sub-15).</p>
+            <p class="mt-2 sm:mt-0">Desenvolvido com foco no rigor operacional @G</p>
+        </div>
+    </footer>
+
+    <!-- Logic Switch Tabs & Theme -->
+    <script>
+        // Tab switching logic
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+            });
+            
+            // Show selected tab content
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+            document.getElementById('content-' + tabId).classList.add('block');
+            
+            // Update active states in buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('tab-active', 'border-blue-700', 'dark:border-blue-500', 'text-blue-700', 'dark:text-blue-500');
+                btn.classList.add('text-slate-500', 'dark:text-slate-400', 'border-transparent');
+            });
+            
+            const activeBtn = document.getElementById('tab-' + tabId);
+            activeBtn.classList.add('tab-active', 'border-blue-700', 'dark:border-blue-500', 'text-blue-700', 'dark:text-blue-500');
+            activeBtn.classList.remove('text-slate-500', 'dark:text-slate-400', 'border-transparent');
+        }
+
+        // Dark/Light Mode toggle
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+
+        // Check user preferences
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
